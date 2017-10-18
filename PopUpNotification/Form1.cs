@@ -24,14 +24,12 @@ namespace PopUpNotification
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            notifyIcon1.ShowBalloon();
-            ;
+            int timeout = 1000;
+            notifyIcon1.BalloonTipTitle = "Title";
+            notifyIcon1.BalloonTipText = "Actual Notification";
+            notifyIcon1.ShowBalloonTip(timeout);
         }
 
-        private static void ShowBaloon()
-        {
-            NotifyIcon.ShowBalloon(string BallootTipText, string BaloonTipTitle,  int timeout)
-        }
+       
     }
 }
